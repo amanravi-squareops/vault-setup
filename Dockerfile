@@ -14,4 +14,6 @@ WORKDIR /app
 
 COPY ./config /config
 
+RUN chmod +x /config/vault-init.sh
+
 CMD ["/bin/sh", "-c", "sleep 2; /config/vault-init.sh;"]
